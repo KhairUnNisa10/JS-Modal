@@ -1,4 +1,4 @@
-# JavaScrip-Modal
+# JavaScript-Modal
 
 While practising JavaScript, I have created a modal using HTML, CSS and JS.
 
