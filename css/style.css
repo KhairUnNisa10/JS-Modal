@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+	background-image: linear-gradient(to right, #780445, #D80079);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.open-modal{
+	outline: none;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	font-size: 20px;
+	color: #ffffff;
+	padding: 20px 60px;
+	border-radius: 5px;
+	font-family: 'Macondo', cursive;
+	cursor: pointer;
+}
+
+.modal-wrapper{
+	/*display: none;*/
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .3s ease-in-out;
+}
+
+.modal-wrapper .modal-container{
+	background-color: #ffffff;
+	width: 40%;
+	padding: 50px;
+	position: relative;
+	transform: translateY(-100%);
+	transition: all .3s ease-in-out;
+}
+
+.modal-wrapper .modal-container h2{
+	font-family: 'Macondo', cursive;
+	font-size: 45px;
+	background: -webkit-linear-gradient(45deg, #780445, #D80079);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 10px;
+}
+
+.modal-wrapper .modal-container p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 22px;
+}
+
+.modal-wrapper .modal-container .exit{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	border: none;
+	outline: none;
+	font-size: 35px;
+	background: -webkit-linear-gradient(45deg, #780445, #D80079);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+}
+
+.modal-wrapper .modal-container .exit:hover{
+	background: -webkit-linear-gradient(45deg, #000000, #b2b2b2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.active{
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modal-wrapper.active .modal-container{
+	transform: translateY(0px);
+}
